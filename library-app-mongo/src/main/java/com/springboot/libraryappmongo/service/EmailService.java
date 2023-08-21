@@ -24,6 +24,8 @@ public class EmailService {
     private final TemplateEngine templateEngine;
     @Value("${spring.mail.verify.fromEmail}")
     private String fromEmail;
+    @Value("${spring.mail.verify.host}")
+    private String HOST;
 
     @Async
     public void sendSimpleMailMessage(String name, String to, String token) {
@@ -42,10 +44,9 @@ public class EmailService {
 
     @Async
     public void sendActivationEmail(String name, String to, String token) {
-        String host = ServletUriComponentsBuilder.fromCurrentContextPath().build().toUriString();
         try {
             Context context = new Context();
-            context.setVariables(Map.of("name", name, "url", buildActivationLink(host, token)));
+            context.setVariables(Map.of("name", name, "url", buildActivationLink(HOST, token)));
             String text = templateEngine.process(EMAIL_TEMPLATE, context);
 
             MimeMessage message = getMimeMessage();
