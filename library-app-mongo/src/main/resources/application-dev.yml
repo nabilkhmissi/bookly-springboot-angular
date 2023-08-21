@@ -28,6 +28,7 @@ spring:
             required: true
     verify:
       fromEmail: ${MAIL_FROM}
+      host: ${APP_HOST}
 
 application:
   security:
