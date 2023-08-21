@@ -1,0 +1,58 @@
+.wrapper {
+    display: block;
+}
+
+.logo {
+    padding: 1rem 0;
+}
+
+label{
+    margin-bottom: 1rem;
+}
+
+.sub-logo {
+    border: 3px solid #a8b79c;
+    width: 25%;
+}
+
+.login-box {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    max-width: 500px;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-btn {
+    color: white;
+    background-color: #a8b79c;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+}
+
+.register {
+    text-align: center;
+}
+
+.register a{
+    text-decoration: none;
+    color: #a8b79c;
+    padding: 5px;
+}
+
+.register a:hover{
+    border-bottom: 3px solid #a8b79c;
+}

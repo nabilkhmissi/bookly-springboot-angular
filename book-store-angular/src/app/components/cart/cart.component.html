@@ -1,0 +1,26 @@
+<div class="cart-list" id="cart-list" [ngStyle]="{ 'transform': isOpen ? 'translate(0)' : 'translate(100%)' }">
+    <div class="button">
+            <i class='bx bx-x cart-close' (click)="hideCart()" *ngIf="isOpen"></i>
+    </div>
+    <div class="title">
+        <h4>Cart items</h4>
+        <span class="sub-title"></span>
+    </div>
+    <div class="panier">
+        <ul class="cart-items">
+            <li *ngFor="let i of(cart$ | async)!.items">
+                <app-cart-item [item]="i"></app-cart-item>
+            </li>
+        </ul>
+    </div>
+    <div class="cart-bottm">
+        <div class="total">
+            <span> total :</span>
+            <span>$ {{ total$ | async }}</span>
+        </div>
+        <div class="checkout">
+            <a routerLink="/checkout">Checkout <i class='bx bx-right-arrow-alt'></i> </a>
+        </div>
+    </div>
+
+</div>

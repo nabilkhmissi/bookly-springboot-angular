@@ -1,0 +1,16 @@
+<div class="item">
+    <div class="remove-btn" (click)="removeItem()">
+        <i class="bx bx-x"></i>
+    </div>
+    <div class="item-image">
+        <img [src]="item.item.image" alt="">
+    </div>
+    <div class="details">
+        <div class="title">
+            {{ item.item.title }}
+        </div>
+        <div class="quantity">
+            <span>$ {{ item.item.price }} x {{ item.quantity }}</span>
+        </div>
+    </div>
+</div>

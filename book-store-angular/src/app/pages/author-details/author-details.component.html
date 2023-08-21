@@ -1,0 +1,24 @@
+<div class="details" *ngIf="author$ | async as author">
+    <div class="image">
+        <div class="img-wrapper">
+            <img src="../../../assets/placeholder_user.jpg" alt="" style="width: 100%;">
+        </div>
+        <div class="infos">
+            <h1>{{ author.full_name }}</h1>
+            <p>{{ author.nationality }} </p>
+            <p>{{ author.birthday | date: "yyyy" }} - {{ author.deathDate| date: "yyyy" }} </p>
+            <p>Books : 166 </p>
+        </div>
+    </div>
+    <div class="achievements">
+        <h1>Books</h1>
+        <div class="div" *ngIf="(books$ | async)?.content as books">
+            <div class="books">
+                <app-book-card *ngFor="let b of books" [book]="b"></app-book-card>
+            </div>
+            <div class="pagination">
+                <app-pagination (pageEvent)="changePage($event)" [pages]="totalPages"></app-pagination>
+            </div>
+        </div>
+    </div>
+</div>

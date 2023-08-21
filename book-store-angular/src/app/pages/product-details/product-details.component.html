@@ -1,0 +1,60 @@
+<div class="details" *ngIf="book$ | async as book">
+    <div class="image-section">
+        <img [src]="book.image" alt="" style="width: 100%;">
+    </div>
+    <div class="infos">
+        <div class="infos-section">
+            <div class="info-section">
+                <h5>{{ book.title }}</h5>
+            </div>
+            <div class="info-section" style="display: flex;gap: 10px;">
+                <div class="rating-section">
+                    <i class="bx bx-star" style="color: #879978;" *ngFor="let a of [].constructor(book.rating)"></i>
+                </div>
+                <div class="sale-section">
+                    <i class="bx bx-download"></i> {{ book.sale_number }}
+                </div>
+
+            </div>
+            <div class="info-section">
+                <div class="auth-image">
+                    <img src="" alt="">
+                </div>
+                <div class="auth-details">
+                    <p style="margin-bottom: 10px;">{{ book.author.full_name }}</p>
+                    <span class="nationality">{{ book.author.nationality }}</span>
+                </div>
+            </div>
+            <div class="info-section">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima explicabo, expedita ipsa
+                architecto quia, corrupti eaque consequuntur facere cupiditate nisi modi eos. Quidem,
+                praesentium! Quod expedita laudantium cumque sapiente fugit, corrupti quaerat fuga tenetur
+                labore enim perferendis alias et veritatis officiis amet illum. Magni dolorum, laudantium
+                harum possimus culpa explicabo!
+            </div>
+            <div class="info-section">
+                <table class="table">
+                    <tr>
+                        <th>Edition:</th>
+                        <td> <span class="edition">{{ book.edition }}</span></td>
+                    </tr>
+                    <tr>
+                        <th>Year:</th>
+                        <td>{{ book.year }}</td>
+                    </tr>
+                    <tr>
+                        <th>Total pages:</th>
+                        <td>{{ book.pages }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="button-section">
+            <button href="" (click)="addToCart(book)"><i class="bx bx-cart me-2"></i> Add to
+                cart</button>
+            <button href="" (click)="addToWishlist(book)"><i class="bx bx-heart me-2"></i>Add to
+                wishlist</button>
+        </div>
+
+    </div>
+</div>

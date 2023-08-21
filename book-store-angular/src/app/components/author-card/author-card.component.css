@@ -1,0 +1,31 @@
+.author-card {
+    padding: 20px;
+    max-width: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.author-card:hover{
+    outline: 1px solid #a8b79c;
+}
+
+.dates p{
+    font-size: 17px;
+}
+
+.image{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.image img{
+    width: 100px;
+    border-radius: 100px;
+}
+

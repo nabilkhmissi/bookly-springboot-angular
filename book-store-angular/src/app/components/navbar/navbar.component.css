@@ -1,0 +1,106 @@
+.navbar {
+    display: flex;
+    background-color: #a8b79c;
+    color: white;
+    padding: 10px 30px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+/*     position: fixed;
+    top: 0; */
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.logo h2{
+    margin-right: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.nav-menu,
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-action {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+i.bx {
+    font-size: 30px;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart-item {
+    position: absolute;
+    background-color: rgb(232, 53, 13);
+    color: white;
+    top: -10px;
+    font-size: 15px;
+    right: -10px;
+    padding: 0 7px;
+    border-radius: 10px;
+}
+
+.active-link {
+    border-bottom: 3px solid #869778;
+    font-weight: bold;
+}
+
+.list-btn{
+    display: none;
+}
+@media (max-width:500px) {
+    .nav-menu {
+        display: none;
+    }
+    .list-btn{
+        display: block;
+    }
+}
+
+.profile-btn {
+    position: relative;
+}
+
+.profile-btn:hover .sub-profile {
+    display: block;
+}
+
+.sub-profile {
+    position: absolute;
+    display: none;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    list-style-type: none;
+    width: 200px;
+    text-align: center;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.17);
+}
+
+.sub-profile li a {
+    color: #869778;
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.sub-profile li a:hover {
+    background-color: #869778;
+    color: white;
+}

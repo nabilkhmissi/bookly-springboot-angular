@@ -1,0 +1,73 @@
+<div class="browse-filter">
+    <form [formGroup]="searchForm">
+        <div class="filter-section">
+            <h4>Categories</h4>
+            <div>
+                <select class="form-select" *ngIf="categories$ | async as categories" formControlName="category">
+                    <option value="">All</option>
+                    <option *ngFor="let a of categories" [ngValue]="a.designation">{{ a.designation }}</option>
+                </select>
+            </div>
+        </div>
+        <div class="filter-section">
+            <h4>Authors</h4>
+            <div>
+                <select class="form-select" *ngIf="authors$ | async as authors" formControlName="author">
+                    <option value="">All</option>
+                    <option *ngFor="let a of authors" [ngValue]="a.id">{{ a.full_name }}</option>
+                </select>
+            </div>
+        </div>
+        <!-- <div class="filter-section">
+            <h4>Price</h4>
+            <div class="row">
+                <div class="col">
+                    <label class="form-label">min</label>
+                    <input type="range" class="form-range" min="0" max="9999" formControlName="price_min">
+                </div>
+                <div class="col">
+                    <label class="form-label">max</label>
+                    <input type="range" class="form-range" min="0" max="9999" formControlName="price_max">
+                </div>
+            </div>
+            <div class="range-limit">
+                <span>{{ price_min }}</span>
+                <span>{{ price_max }}</span>
+            </div>
+        </div>
+        <div class="filter-section">
+            <h4>Year</h4>
+            <div class="row">
+                <div class="col">
+                    <label class="form-label">min</label>
+                    <input type="range" class="form-range" min="0" max="1900" formControlName="year_min">
+                </div>
+                <div class="col">
+                    <label class="form-label">max</label>
+                    <input type="range" class="form-range" min="1900" max="2023" formControlName="year_max">
+                </div>
+            </div>
+            <div class="range-limit">
+                <span>{{ year_min }}</span>
+                <span>{{ year_max }}</span>
+            </div>
+        </div>
+        <div class="filter-section">
+            <h4>Pages</h4>
+            <div class="row">
+                <div class="col">
+                    <label class="form-label">min</label>
+                    <input type="range" class="form-range" min="0" max="99999" formControlName="pages_min">
+                </div>
+                <div class="col">
+                    <label class="form-label">max</label>
+                    <input type="range" class="form-range" min="0" max="999999" formControlName="pages_max">
+                </div>
+            </div>
+            <div class="range-limit">
+                <span>{{ pages_min }}</span>
+                <span>{{ pages_max }}</span>
+            </div>
+        </div> -->
+    </form>
+</div>

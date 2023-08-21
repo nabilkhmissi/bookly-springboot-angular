@@ -1,0 +1,161 @@
+.checkout-container {
+    max-width: 120rem;
+    height: 50rem;
+    display: flex;
+    border-top: 2px solid #a8b79c;
+    padding-top: 2rem;
+}
+
+em {
+    font-style: normal;
+    font-weight: 700;
+}
+
+hr {
+    color: #fff;
+    margin-bottom: 1.2rem;
+}
+
+.text-box {
+    background: rgba(95, 121, 134, 0.8);
+    width: 100%;
+    padding: 1rem 2rem;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Right Side of container */
+
+.right-side {
+    padding: 1.8rem 3.2rem;
+}
+
+.receipt {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-bottom: solid 1px;
+    margin-bottom: 1rem;
+}
+
+.receipt-heading {
+    font-size: 1.6rem;
+    text-align: left;
+}
+
+.table {
+    border-collapse: separate;
+    border-spacing: 0 1.5rem;
+    color: #64645f;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.total td {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.price {
+    text-align: end;
+}
+
+/* Payment Section */
+
+.payment-heading {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.form-box {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 1.5rem;
+}
+.card-logos{
+    display: flex;
+    gap: 10px;
+}
+
+.card-logo {
+    font-size: 2rem;
+}
+
+.expires,
+.form-box label {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.form-box input, select {
+    font-family: inherit;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.form-box select {
+    padding: 0.5rem;
+}
+
+.form-box #cvv {
+    width: 25%;
+}
+
+.cvv-info:link,
+.cvv-info:visited {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.cvv-info:hover,
+.cvv-info:active {
+    color: #5f7986;
+    text-decoration: none;
+}
+
+.btn {
+    background-color: #a8b79c;
+    border: none;
+    border-radius: 5px;
+    color: #eff2f3;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #849278;
+    transition: ease-out 0.1s;
+}
+
+.footer-text {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.card-details{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card-details>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-experation{
+    display: flex;
+    gap: 1rem;
+}
+
+.personal-details{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}

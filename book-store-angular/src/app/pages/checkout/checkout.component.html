@@ -1,0 +1,37 @@
+<div *ngIf="cart$ | async as cart">
+    <h1 class="section-title">Cart</h1>
+    <div class="cart" *ngIf="cart.items.length !== 0">
+        <div class="items">
+            <app-checkout-item *ngFor="let i of cart.items" [item]="i"></app-checkout-item>
+        </div>
+        <div class="checkout">
+            <div class="top-s">
+                <div>
+                    <span>{{ cart.items.length }} articles</span>
+                    <span>Livraison</span>
+                </div>
+                <div>
+                    <span> $ {{ total$ | async }}</span>
+                    <span>gratuite</span>
+                </div>
+            </div>
+            <div class="m-s">
+                <div>
+                    Total
+                </div>
+                <div>
+                    <span class="total"> $ {{ total$ | async }}</span>
+                </div>
+            </div>
+
+            <app-checkout-form *ngIf="paimentPage" (cancel)="cancelCheckout($event)"></app-checkout-form>
+
+            <div class="b-s" *ngIf="!paimentPage">
+                <button (click)="switchToPaiement()">{{proceedBtn}}</button>
+            </div>
+        </div>
+    </div>
+    <div class="alert alert-lignt text-center" *ngIf="cart.items.length === 0">
+        You have not item here
+    </div>
+</div>

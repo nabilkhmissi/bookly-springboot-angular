@@ -1,0 +1,12 @@
+<div class="wrapper">
+    <div class="page-title">
+        <h4>Authors</h4>
+        <span class="sub-title"></span>
+    </div>
+    <div class="content">
+        <app-author-card *ngFor="let a of authors" [author]="a"></app-author-card>
+    </div>
+    <div class="pagination" *ngIf="!emptySearch">
+        <app-pagination (pageEvent)="changePage($event)" [pages]="totalPages"></app-pagination>
+    </div>
+</div>

@@ -1,0 +1,92 @@
+.product-card p {
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    color: #333;
+}
+
+.product-title {
+    text-overflow: ellipsis;
+    padding: 10px 0;
+    padding-bottom: 0;
+}
+
+.product-title p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.author {
+    font-weight: 400;
+}
+
+.product-price {
+    font-weight: 600;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+.product-image {
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    justify-content: center;
+    display: flex;
+    flex-grow: 1;
+}
+
+.product-image img {
+    width: 100%;
+}
+
+.product-rating i {
+    font-size: 18px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #a8b79c8a;
+    z-index: 10;
+    transform: translateY(100%);
+    transition: .2s;
+    display: grid;
+    place-content: center;
+}
+
+.product-card:hover .overlay {
+    transform: translateY(0);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.action {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.309);
+    color: white;
+    border-radius: 50px;
+    border: none;
+}
+
+.action:hover {
+    background-color: rgba(0, 0, 0, 0.576);
+
+}
+
+.action i {
+    font-size: 25px;
+}

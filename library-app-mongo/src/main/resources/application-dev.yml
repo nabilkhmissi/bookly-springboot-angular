@@ -1,0 +1,37 @@
+spring:
+  data:
+    mongodb:
+      username: root
+      password: password
+      host: localhost
+      port: 27017
+      database: library_db
+      authentication-database: admin
+  # email configuration
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    default-encoding: UTF-8
+    properties:
+      mail:
+        mime:
+          charset: UTF
+        smtp:
+          auth: true
+          writetimeout: 10000
+          connectiontimeout: 10000
+          timeout: 10000
+          starttls:
+            enable: true
+            required: true
+    verify:
+      fromEmail: ${MAIL_FROM}
+
+application:
+  security:
+    jwt:
+      secret-key:
+        value: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+        expiration: 86400000

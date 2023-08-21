@@ -1,0 +1,69 @@
+<div class="navbar container-fluid">
+    <div class="container">
+        <div class="nav">
+            <a routerLink="index" class="logo">
+                <h2 >BookStore</h2>
+            </a>
+            <div class="nav-menu">
+                <a routerLink="index" routerLinkActive="active-link">Home</a>
+                <a routerLink="books/browser" routerLinkActive="active-link">Browse</a>
+                <a routerLink="authors" routerLinkActive="active-link">Authors</a>
+                <a routerLink="books/best-sellers" routerLinkActive="active-link">Best sellers</a>
+                <a routerLink="books/newest" routerLinkActive="active-link">Newest</a>
+                <a routerLink="books/featured" routerLinkActive="active-link">Featured</a>
+            </div>
+        </div>
+
+        <div class="nav" *ngIf="isAuthenticated$ | async">
+            <div class="nav-action cart" *ngIf="cart$ | async as cart" (click)="toggleCart($event)">
+                <span id="cart-btn"><i class="bx bx-cart"></i></span>
+                <span class="cart-item">
+                    {{ cart.items.length }}
+                </span>
+            </div>
+            <div class="nav-action" (click)="toggleWishlist($event)">
+                <span href=""><i class="bx bx-heart"></i></span>
+            </div>
+            <div class="nav-action profile-btn">
+                <span href=""><i class="bx bx-user"></i></span>
+                <ul class="sub-profile">
+                    <li>
+                        <a href="">Account settings</a>
+                    </li>
+                    <li>
+                        <a (click)="logout($event)">Logout</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-action profile-btn list-btn">
+                <span href=""><i class="bx bx-menu"></i></span>
+                <ul class="sub-profile">
+                    <li>
+                        <a routerLink="/books/browser">Books</a>
+                    </li>
+                    <li>
+                        <a routerLink="/authors">Authors</a>
+                    </li>
+                    <li>
+                        <a routerLink="/books/newest">Newest</a>
+                    </li>
+                    <li>
+                        <a routerLink="/books/best-sellers">Best sellers</a>
+                    </li>
+                    <li>
+                        <a routerLink="/books/featured">Featured</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="nav" *ngIf="!(isAuthenticated$ | async)">
+            <div class="nav-action">
+                <a routerLink="login">Login</a>
+            </div>
+            <div class="nav-action">
+                <a routerLink="register">Register</a>
+            </div>
+        </div>
+    </div>
+</div>

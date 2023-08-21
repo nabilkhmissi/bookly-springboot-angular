@@ -1,0 +1,43 @@
+.footer {
+    background-color: #a8b79c;
+}
+
+.f-logo{
+    text-decoration: none;
+}
+
+.f-logo h1{
+    color: white;
+}
+
+.f-links{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.f-section{
+    color: white;
+}
+
+.f-links a{
+    text-decoration: none;
+    color: white;
+}
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    padding: 3rem 0;
+}
+
+
+
+@media screen and (max-width:500px) {
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,36 @@
+.item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    border-bottom: 1px solid rgb(180, 208, 165);
+    overflow: hidden;
+    padding: 5px 0;
+    position: relative;
+}
+
+.remove-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+.title {
+    font-weight: 500;
+}
+
+.item-image {
+    max-width: 50px;
+}
+
+.item-image img {
+    width: 100%;
+}
+
+.quantity{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}

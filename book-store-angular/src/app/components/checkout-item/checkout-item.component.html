@@ -1,0 +1,22 @@
+<div class="item">
+    <div class="remove-btn" (click)="removeItem()">
+        <i class="bx bx-x"></i>
+    </div>
+    <div class="item-image">
+        <img [src]="item.item.image" alt="">
+    </div>
+    <div class="title">
+        {{ item.item.title }}
+    </div>
+    <div class="quantity">
+        <div class="single-price">
+            {{ item.item.price }} x
+        </div>
+        <div class="nb-of-pieces">
+            <input type="number" [(ngModel)]="item.quantity" name="quantity" min="1" (input)="updateQuantity($event)">
+        </div>
+    </div>
+    <div class="total">
+        $ {{ item.item.price * item.quantity }}
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="product-card">
+    <div class="product-image">
+        <img [src]="book.image" alt="">
+        <div class="overlay">
+            <div class="action-buttons">
+                <button class="action" (click)="goToDetails(book.id)">
+                    <i class='bx bx-list-ul'></i>
+                </button>
+                <button class="action" (click)="addToWishlist()">
+                    <i class="bx bx-heart"></i>
+                </button>
+                <button class="action" (click)="addToCart()">
+                    <i class="bx bx-cart"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="product-details">
+        <div class="product-title">
+            <p>{{ book.title }}</p>
+        </div>
+        <div class="product-rating">
+            <i style="color: #879978;" class='bx bx-star' *ngFor="let a of [].constructor(book.rating)"></i>
+        </div>
+        <span class="product-price">${{ book.price | number:'1.0-2' }}</span>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+.details {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    min-height: 100vh;
+    grid-gap: 20px;
+}
+
+.image {
+    width: 300px;
+    /*     border-right: 2px solid #a8b79c;
+ */
+    display: flex;
+    flex-direction: column;
+}
+
+.infos {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+    padding: 20px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+@media screen and (max-width:500px) {
+    .details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .img-wrapper {
+        width: 100px;
+    }
+
+    .infos {
+        text-align: start;
+        justify-content: center;
+    }
+
+    .achievements {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .books {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

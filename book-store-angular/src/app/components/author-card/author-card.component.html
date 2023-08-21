@@ -1,0 +1,10 @@
+<a class="author-card" routerLink="/authors/details/{{author.id}}">
+    <div class="image">
+        <img src="../../../assets/placeholder_user.jpg" alt="">
+    </div>
+    <h4> {{ author.full_name }} </h4>
+    <p>{{ author.nationality }}</p>
+    <div class="dates">
+        <p> {{ author.birthday | date: "yyyy" }} - {{ author.deathDate| date: "yyyy" }}  </p>
+    </div>
+</a>

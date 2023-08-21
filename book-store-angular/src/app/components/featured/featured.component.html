@@ -1,0 +1,5 @@
+<div class="grid">
+    <div class="item" *ngFor="let b of (featured$ | async)?.content">
+        <app-book-card [book]="b"></app-book-card>
+    </div>
+</div>
