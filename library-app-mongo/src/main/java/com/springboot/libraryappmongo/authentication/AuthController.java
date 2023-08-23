@@ -53,7 +53,7 @@ public class AuthController {
     }
 
     @GetMapping("/password/recover")
-    public ApiResponse resetPassword(@RequestParam String resetToken){
+    public ApiResponse resetPassword(@RequestParam String resetToken) {
         return ApiResponse.builder()
                 .timestamp(LocalDateTime.now())
                 .message("password reset successfully")
