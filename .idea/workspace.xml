@@ -5,63 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00b03409-bb52-4822-8a7d-6d8a1da7c873" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/book-store-angular/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/app.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/app.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/best-sellers/best-sellers.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/components/best-sellers/best-sellers.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/cart/cart.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/components/cart/cart.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/featured/featured.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/components/featured/featured.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/featured/featured.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/components/featured/featured.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/featured/featured.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/components/featured/featured.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/footer/footer.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/components/footer/footer.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/components/footer/footer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/hero-section/hero-section.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/hero-section/hero-section.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/hero-section/hero-section.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/hero-section/hero-section.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/hero/hero.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/components/hero/hero.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/hero/hero.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/components/hero/hero.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/home/home.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/home/home.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/home/home.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/home/home.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/navbar/navbar.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/components/navbar/navbar.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/components/navbar/navbar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/product-card/product-card.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/product-card/product-card.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/product-card/product-card.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/components/wishlist/wishlist.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/components/wishlist/wishlist.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/pages/author-details/author-details.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/pages/author-details/author-details.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/pages/author-details/author-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/pages/author-details/author-details.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/pages/best-sellers-page/best-sellers-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/pages/best-sellers-page/best-sellers-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/pages/browse/browse.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/pages/browse/browse.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/pages/browse/browse.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/pages/browse/browse.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/pages/featured/featured-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/pages/featured/featured-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/pages/login/login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/pages/login/login.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/pages/newest-added/newest-added.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/pages/newest-added/newest-added.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/pages/product-details/product-details.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/pages/product-details/product-details.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/pages/product-details/product-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/pages/product-details/product-details.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/app/pages/register/register.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/app/pages/register/register.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/assets/CK-3.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/assets/author.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/assets/book_c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/assets/book_cover.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/assets/cover-hero.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/environments/environment.prod.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book-store-angular/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/book-store-angular/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-app-mongo/src/main/java/com/springboot/libraryappmongo/service/EmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/library-app-mongo/src/main/java/com/springboot/libraryappmongo/service/EmailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-app-mongo/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/library-app-mongo/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-app-mongo/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/library-app-mongo/src/main/resources/application-prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library-app-mongo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/library-app-mongo/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library-app-mongo/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/library-app-mongo/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +20,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/library-app-mongo" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -111,7 +55,7 @@
   <component name="RunManager">
     <configuration name="LibraryAppMongoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <envs>
-        <env name="APP_ACTIVE_PROFILE" value="dev" />
+        <env name="APP_ACTIVE_PROFILE" value="prod" />
         <env name="MAIL_USERNAME" value="bila5missi@gmail.com" />
         <env name="MAIL_PASSWORD" value="ckczyxkadvwyynao" />
         <env name="MAIL_FROM" value="bila5missi@gmail.com" />
@@ -136,7 +80,7 @@
       <workItem from="1691945057611" duration="1199000" />
       <workItem from="1691966560259" duration="10488000" />
       <workItem from="1692033128522" duration="80000" />
-      <workItem from="1692649306558" duration="1033000" />
+      <workItem from="1692649306558" duration="5134000" />
     </task>
     <servers />
   </component>

@@ -8,7 +8,6 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
@@ -19,7 +18,8 @@ import java.util.Map;
 public class EmailService {
     public static final String NEW_USER_ACCOUNT_VERIFICATION = "Account activation";
     public static final String UTF_8_ENCODING = "UTF-8";
-    public static final String EMAIL_TEMPLATE = "verification_email";
+    public static final String ACTIVATION_TEMPLATE = "verification_email";
+    public static final String RECOVER_PASSWORD_TEMPLATE = "recover_password_email";
     private final JavaMailSender emailSender;
     private final TemplateEngine templateEngine;
     @Value("${spring.mail.verify.fromEmail}")
@@ -43,28 +43,42 @@ public class EmailService {
     }
 
     @Async
-    public void sendActivationEmail(String name, String to, String token) {
-        try {
-            Context context = new Context();
-            context.setVariables(Map.of("name", name, "url", buildActivationLink(HOST, token)));
-            String text = templateEngine.process(EMAIL_TEMPLATE, context);
+    public void sendEmailAction(String action, String name, String to, String token) {
+        String template = null;
+        String url = null;
 
-            MimeMessage message = getMimeMessage();
-            MimeMessageHelper helper = new MimeMessageHelper(message, true, UTF_8_ENCODING);
-            helper.setPriority(1);
-            helper.setSubject(NEW_USER_ACCOUNT_VERIFICATION);
-            helper.setFrom(fromEmail);
-            helper.setTo(to);
-            helper.setText(text, true);
-            emailSender.send(message);
-        } catch (Exception exception) {
-            throw new RuntimeException(exception.getMessage());
+        if (action.equals("activation")){
+            template = ACTIVATION_TEMPLATE;
+            url = buildActivationLink(HOST, token);
+        }else{
+            template = RECOVER_PASSWORD_TEMPLATE;
+            url = buildActivationLink(HOST, token);
         }
+            try {
+                Context context = new Context();
+                context.setVariables(Map.of("name", name,
+                        "url", url));
+                String text = templateEngine.process(template, context);
+
+                MimeMessage message = getMimeMessage();
+                MimeMessageHelper helper = new MimeMessageHelper(message, true, UTF_8_ENCODING);
+                helper.setPriority(1);
+                helper.setSubject(NEW_USER_ACCOUNT_VERIFICATION);
+                helper.setFrom(fromEmail);
+                helper.setTo(to);
+                helper.setText(text, true);
+                emailSender.send(message);
+            } catch (Exception exception) {
+                throw new RuntimeException(exception.getMessage());
+            }
     }
+
     private String buildActivationLink(String host, String token) {
         return String.format("%s/api/v1/auth/verify?token=%s", host, token);
     }
-
+    private String buildRecoverLink(String host, String token) {
+        return String.format("%s/api/v1/auth/password/recover?token=%s", host, token);
+    }
     private MimeMessage getMimeMessage() {
         return emailSender.createMimeMessage();
     }

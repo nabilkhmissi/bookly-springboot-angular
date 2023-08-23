@@ -8,6 +8,7 @@ import com.springboot.libraryappmongo.models.User;
 import com.springboot.libraryappmongo.repo.UserRepository;
 import com.springboot.libraryappmongo.security.JwtService;
 import com.springboot.libraryappmongo.service.ConfirmationService;
+import com.springboot.libraryappmongo.service.EmailService;
 import com.springboot.libraryappmongo.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -25,9 +26,13 @@ public class AuthenticationService {
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
     private final ConfirmationService confirmationService;
+    private final EmailService emailService;
 
     public String register(RegisterRequest request) {
         UserDto user = userService.save(request);
+        Confirmation confirmation = confirmationService.create(user.getId());
+        String user_full_name = user.getFirstName() + " " + user.getFirstName();
+        emailService.sendEmailAction("activation", user_full_name, user.getEmail(), confirmation.getToken());
 
         /* var jwtToken = jwtService.generateToken(UserDto.toEntity(user));*/
         /*return AuthenticationResponse.builder()
@@ -72,5 +77,32 @@ public class AuthenticationService {
 
         return userService.activateUser(confirmation.getUserId());
 
+    }
+
+    public String restorePassword(String email) {
+        User user = repository.findByEmail(email);
+        if (user == null) {
+            throw new EntityNotFoundException("invalid email/password");
+        }
+        Confirmation confirmation = confirmationService.create(user.getId());
+
+        String user_full_name = user.getFirstName() + " " + user.getFirstName();
+        emailService.sendEmailAction("recover", user_full_name, user.getEmail(), confirmation.getToken());
+        return "Password reset link sent to your email, please check your email for for the link";
+    }
+
+    public String resetPassword(String resetToken) {
+        Confirmation confirmation = confirmationService.findByToken(resetToken);
+        if (confirmation == null) {
+            return "Invalid token, please check your email for a valid activation link";
+        }
+        LocalDateTime tokenExpiration = confirmation.getTokenExpiration();
+
+        if (!LocalDateTime.now().isBefore(tokenExpiration)) {
+            return "Token has been expired, contact support to generate another token";
+        }
+
+        //todo add reset password form
+        return "";
     }
 }

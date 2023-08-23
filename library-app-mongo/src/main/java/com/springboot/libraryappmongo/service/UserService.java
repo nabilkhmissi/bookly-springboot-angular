@@ -23,8 +23,6 @@ public class UserService {
     private final PasswordEncoder passwordEncoder;
     private final CartService cartService;
     private final WishlistService wishlistService;
-    private final ConfirmationService confirmationService;
-    private final EmailService emailService;
 
    /* public UserDto findById(Long id) {
         User user = userRepository.findById(id);
@@ -62,9 +60,6 @@ public class UserService {
         userAccount.setWhishlistId(wishlistService.createNewWhishlist());
         userAccount.setEnabled(false);
         User user = userRepository.save(userAccount);
-        String user_full_name = user.getFirstName() + " " + user.getFirstName();
-        Confirmation confirmation = confirmationService.create(user.getId());
-        emailService.sendActivationEmail(user_full_name, user.getEmail(), confirmation.getToken());
         return UserDto.fromEntity(user);
     }
 

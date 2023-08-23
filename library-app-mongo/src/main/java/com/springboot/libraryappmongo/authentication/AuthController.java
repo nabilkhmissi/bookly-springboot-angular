@@ -40,4 +40,26 @@ public class AuthController {
     public String activateAccount(@RequestParam String token) {
         return authenticationService.activateUserAccount(token);
     }
+
+    @PostMapping("/restore-password")
+    public ApiResponse restorePassword(@RequestBody String email) {
+        return ApiResponse.builder()
+                .timestamp(LocalDateTime.now())
+                .message("logged in successfully")
+                .code(HttpStatus.OK.value())
+                .status(HttpStatus.OK)
+                .data(authenticationService.restorePassword(email))
+                .build();
+    }
+
+    @GetMapping("/password/recover")
+    public ApiResponse resetPassword(@RequestParam String resetToken){
+        return ApiResponse.builder()
+                .timestamp(LocalDateTime.now())
+                .message("password reset successfully")
+                .code(HttpStatus.OK.value())
+                .status(HttpStatus.OK)
+                .data(authenticationService.resetPassword(resetToken))
+                .build();
+    }
 }
