@@ -2,7 +2,7 @@
 
 Welcome to the Book Store Application! This project is a simple example of a book store web application developed using Spring Boot for the backend and Angular for the frontend. The application allows users to purchase books, add them to their carts, and explore a wide range of books.
 
-## Live : https://boostorapp19.netlify.app
+## Live : https://book-store18.netlify.app/
 ## For test : 
 - email : user@mail.com
 - password : user
