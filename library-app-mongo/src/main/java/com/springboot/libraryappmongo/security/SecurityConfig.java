@@ -27,7 +27,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.PATCH;
 public class SecurityConfig {
 
 
-    private final CustomAuthenticationProvider customAuthenticationProvider;
+    private final CustomAuthenticationProvider authenticationProvider;
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Bean
@@ -39,14 +39,13 @@ public class SecurityConfig {
                     authz.requestMatchers("/api/v1/auth/**",
                                     "/api/v1/book/**",
                                     "/api/v1/author/**",
-                                    "/api/v1/category/**",
-                                    "/api/v1/paiement/**").permitAll()
+                                    "/api/v1/category/**").permitAll()
                             .anyRequest().authenticated();
                 }
         );
         http.sessionManagement(sessions -> sessions
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS));
-        http.authenticationProvider(customAuthenticationProvider);
+        http.authenticationProvider(authenticationProvider);
         http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
         return http.build();
     }

@@ -39,6 +39,7 @@ public class DBInitService {
         user.setFirstName("user");
         user.setLastName("user");
         user.setRoles("ROLE_USER");
+        user.setEnabled(true);
         user.setCartId(cartService.createNewCart());
         user.setWhishlistId(wishlistService.createNewWhishlist());
         userRepository.deleteAll();
