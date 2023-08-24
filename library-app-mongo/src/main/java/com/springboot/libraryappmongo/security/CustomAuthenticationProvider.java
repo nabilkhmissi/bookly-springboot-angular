@@ -1,6 +1,7 @@
 package com.springboot.libraryappmongo.security;
 
 import com.springboot.libraryappmongo.exception.EntityNotFoundException;
+import com.springboot.libraryappmongo.exception.InvalidEntityException;
 import com.springboot.libraryappmongo.models.User;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -28,6 +29,14 @@ public class CustomAuthenticationProvider extends DaoAuthenticationProvider {
 
         if(user == null){
             throw new EntityNotFoundException("user with this email not found");
+        }
+
+        if(!user.isEnabled()){
+            throw new InvalidEntityException("this account is not yet activated, \n please check your email for activation token");
+        }
+
+        if(!getPasswordEncoder().matches(password, user.getPassword())){
+            throw new InvalidEntityException("password doesnt match");
         }
 
         UsernamePasswordAuthenticationToken authenticationToken
