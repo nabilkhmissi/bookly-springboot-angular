@@ -46,12 +46,9 @@ public class AuthenticationService {
         if (confirmation == null) {
             return "Invalid token, please check your email for a valid activation link";
         }
-
         if (!confirmationService.validateConfirmation(confirmation)) {
             return "Token has been expired, contact support to generate another token";
         }
-
         return userService.activateUser(confirmation.getUserId());
-
     }
 }
