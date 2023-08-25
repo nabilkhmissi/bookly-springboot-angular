@@ -36,7 +36,7 @@ public class CustomAuthenticationProvider extends DaoAuthenticationProvider {
         }
 
         if(!getPasswordEncoder().matches(password, user.getPassword())){
-            throw new InvalidEntityException("password doesnt match");
+            throw new InvalidEntityException("invalid username/password");
         }
 
         UsernamePasswordAuthenticationToken authenticationToken
