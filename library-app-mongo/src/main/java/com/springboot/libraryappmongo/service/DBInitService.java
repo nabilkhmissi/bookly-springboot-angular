@@ -99,9 +99,7 @@ public class DBInitService {
 
 
         books.forEach(b -> {
-            int days = 30;
-            int month = 12;
-            b.setAddedDate(LocalDate.of(2023, random.nextInt(month), random.nextInt(days)));
+            b.setAddedDate(LocalDate.of(2023, 05, 14));
         });
 
         List<String> categoryNames = new ArrayList<>();
