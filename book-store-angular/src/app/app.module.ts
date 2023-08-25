@@ -35,6 +35,8 @@ import { JwtInterceptor } from './interceptor/jwt.interceptor';
 import { ErrorInterceptor } from './interceptor/error.interceptor';
 import { BookCardComponent } from './components/book-card/book-card.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+import { ChangePasswordComponent } from './pages/change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +73,9 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
     CheckoutItemComponent,
     CheckoutFormComponent,
     BookCardComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    ResetPasswordComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,

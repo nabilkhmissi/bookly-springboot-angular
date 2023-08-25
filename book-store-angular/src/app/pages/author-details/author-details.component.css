@@ -6,7 +6,7 @@
 }
 
 .image {
-    width: 300px;
+    max-width: 300px;
     /*     border-right: 2px solid #a8b79c;
  */
     display: flex;
@@ -31,7 +31,7 @@
     padding: 20px 0;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:600px) {
     .details {
         display: flex;
         flex-direction: column;

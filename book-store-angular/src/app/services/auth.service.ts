@@ -3,13 +3,14 @@ import { Injectable } from '@angular/core';
 import { LoadingService } from './loading.service';
 import { AuthResponse } from '../models/authResponse.model';
 import { AuthRequest } from '../models/authRequest.model';
-import { BehaviorSubject, tap } from 'rxjs';
+import { BehaviorSubject, map, tap } from 'rxjs';
 import { ApiResponse } from '../models/apiResponse.model';
 import { User } from '../models/user.model';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { RegisterRequest } from '../models/registerRequest.model';
 import { NotificationService } from './notification.service';
+import { ResetPassword } from '../models/resetPassword.model';
 
 @Injectable({
   providedIn: 'root'
@@ -56,6 +57,31 @@ export class AuthService {
     )
   }
 
+  resetPassword(reset: ResetPassword) {
+    this._loading.showLoading();
+    return this._http.post<ApiResponse>(`${this.baseUrl}/reset-password`, reset).pipe(
+      tap(response => {
+        this._notification.showNotification(response.data);
+        this._loading.hideLoading();
+        this.logout();
+        this._router.navigateByUrl("/login")
+      })
+    )
+  }
+
+
+  sendResetToken(email: string) {
+    this._loading.showLoading();
+    return this._http.get<ApiResponse>(`${this.baseUrl}/reset-password?email=${email}`).pipe(
+      tap(response => {
+        this._notification.showNotification(response.data);
+        this._loading.hideLoading();
+        this._router.navigateByUrl("/change-password")
+      })
+    )
+  }
+
+
   saveAuthToLS(data: AuthResponse) {
     localStorage.setItem("bookStore", JSON.stringify(data))
   }
@@ -82,5 +108,6 @@ export class AuthService {
     localStorage.removeItem("bookStore")
     localStorage.removeItem("bookStoreCart")
     localStorage.removeItem("bookStoreWishlist")
+    this._router.navigateByUrl("/")
   }
 }

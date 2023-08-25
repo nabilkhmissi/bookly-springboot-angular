@@ -6,11 +6,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-@media screen and (max-width:500px) {
-    .wrapper {
-        padding: 2%;
-    }
-}
 .grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -24,6 +19,9 @@
     .grid{
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         grid-gap: 20px;
+    }
+    .wrapper {
+        padding: 2%;
     }
 }
 
