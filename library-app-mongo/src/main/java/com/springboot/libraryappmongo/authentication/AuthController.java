@@ -44,15 +44,27 @@ public class AuthController {
         return authenticationService.activateUserAccount(token);
     }
 
-    @PostMapping("/reset-password/token")
-    public String requestResetToken(@RequestBody String email){
+    @GetMapping("/reset-password")
+    public ApiResponse requestResetToken(@RequestParam(name = "email") String email){
         userService.requestResetToken(email);
-        return "We have sent a reset token to your email, please check you inbox";
+        return ApiResponse.builder()
+                .timestamp(LocalDateTime.now())
+                .message("reset token sent successfully")
+                .code(HttpStatus.OK.value())
+                .status(HttpStatus.OK)
+                .data("We have sent a reset token to your email, please check you inbox")
+                .build();
     }
 
-    @PostMapping("/reset-password/change")
-    public String changePassword(@RequestBody ResetPassword reset){
+    @PostMapping("/reset-password")
+    public ApiResponse changePassword(@RequestBody ResetPassword reset){
         userService.resetPassword(reset);
-        return "Password changed successfully !";
+        return ApiResponse.builder()
+                .timestamp(LocalDateTime.now())
+                .message("reset token sent successfully")
+                .code(HttpStatus.OK.value())
+                .status(HttpStatus.OK)
+                .data("Password changed successfully !")
+                .build();
     }
 }
