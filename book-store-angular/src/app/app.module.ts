@@ -37,6 +37,7 @@ import { BookCardComponent } from './components/book-card/book-card.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 import { ChangePasswordComponent } from './pages/change-password/change-password.component';
+import { FeaturesComponent } from './components/features/features.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { ChangePasswordComponent } from './pages/change-password/change-password
     BookCardComponent,
     CheckoutComponent,
     ResetPasswordComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    FeaturesComponent
   ],
   imports: [
     BrowserModule,

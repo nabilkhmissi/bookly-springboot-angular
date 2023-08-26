@@ -1,9 +1,7 @@
 <app-notification *ngIf="notification$ | async"></app-notification>
 <app-loading *ngIf="loading$ | async"></app-loading>
 <app-navbar></app-navbar>
-<div class="container main">
-    <router-outlet></router-outlet>
-</div>
+<router-outlet></router-outlet>
 <app-footer></app-footer>
 <app-cart></app-cart>
 <app-wishlist></app-wishlist>

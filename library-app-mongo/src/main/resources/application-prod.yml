@@ -27,6 +27,8 @@ spring:
 
 
 application:
+  frontend:
+    url: ${APP_ENABLED_FORNTEND}
   security:
     jwt:
       secret-key:
