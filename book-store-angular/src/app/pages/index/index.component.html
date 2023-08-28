@@ -1,3 +1,136 @@
-<app-hero></app-hero>
+<!-- <app-hero></app-hero>
 <app-features></app-features>
 <app-featured></app-featured>
+<app-book-festival></app-book-festival>
+<app-author-week></app-author-week>
+<app-discount></app-discount> -->
+<section class="hero">
+    <div class="container hero-content">
+        <div class="hero-text">
+            <h2>Year end sale</h2>
+            <h1 class="promotion">Get 70% Off For All</h1>
+            <h1 class="promotion">Design Books</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente saepe illo debitis ea aut voluptas!
+                Deserunt accusamus assumenda incidunt numquam?</p>
+        </div>
+    </div>
+</section>
+<section class="featured">
+    <div class="container">
+        <div class="section-title">
+            <h1>Featured books</h1>
+            <span class="section-sub-title"></span>
+        </div>
+        <div class="books-grid">
+
+            <owl-carousel-o [options]="customOptions">
+
+                <ng-container *ngFor="let book of (featured$ | async)?.content">
+                    <ng-template carouselSlide [id]="book.id">
+                        <app-book-card [book]="book"></app-book-card>
+                    </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+
+        </div>
+    </div>
+    <!-- features section -->
+</section>
+<div class="section">
+    <div class="features">
+        <div class="feature">
+            <i class="bx bx-lock"></i>
+            <div class="details">
+                <h4>Secure paiment</h4>
+                <p>100% secure payment</p>
+            </div>
+        </div>
+        <div class="feature">
+            <i class='bx bx-purchase-tag-alt'></i>
+            <div class="details">
+                <h4>Best price</h4>
+                <p>Guarantee price</p>
+            </div>
+        </div>
+        <div class="feature">
+            <i class='bx bx-revision'></i>
+            <div class="details">
+                <h4>Free returns</h4>
+                <p>Within 30 days returns</p>
+            </div>
+        </div>
+        <div class="feature">
+            <i class='bx bx-package'></i>
+            <div class="details">
+                <h4>Free shipping</h4>
+                <p>Order over $100</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- book festival -->
+<section class="festival">
+    <h4>Shop wide range of collections</h4>
+    <h1>BOOK FESTIVAL</h1>
+    <h5>ALL BOOKS ARE FLAT <strong>50% OFF</strong></h5>
+    <button class="shop-btn">SHOP NOW</button>
+</section>
+<!-- book festival end -->
+<!-- Author of the week -->
+<section class="container">
+    <div class="author-week-section">
+        <div class="section-title">
+            <h1>Author of the week</h1>
+            <span class="section-sub-title"></span>
+        </div>
+        <div class="author-week-books">
+            <div class="week-books">
+                <owl-carousel-o [options]="customOptions">
+
+                    <ng-container *ngFor="let book of (newest$ | async)?.content">
+                        <ng-template carouselSlide [id]="book.id">
+                            <app-book-card [book]="book"></app-book-card>
+                        </ng-template>
+                    </ng-container>
+                </owl-carousel-o>
+            </div>
+            <div class="week-author">
+                <div class="img">
+                    <img src="../../../assets/author-of-the-week.webp" alt="">
+                </div>
+                <div class="author-details">
+                    <div class="author-name">
+                        <h2>Pauolo Coehlo</h2>
+                        <p>- author</p>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci nam cupiditate tenetur quos, ex
+                        labore.</p>
+                    <h2>Awards</h2>
+                    <div class="awards">
+                        <img src="../../../assets/award-1.webp" alt="">
+                        <img src="../../../assets/award-1.webp" alt="">
+                        <img src="../../../assets/award-1.webp" alt="">
+                        <img src="../../../assets/award-1.webp" alt="">
+                        <img src="../../../assets/award-1.webp" alt="">
+                        <img src="../../../assets/award-1.webp" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- Author of the week end -->
+<!-- app discount -->
+<section class="discount">
+    <div class="text">
+        <h2>Special Offers</h2>
+        <h1>30% DISCOUNT ON BOOKS</h1>
+        <h1>LEARN LANGUAGE</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus asperiores ea sit explicabo expedita
+            adipisci perspiciatis ipsa nostrum fugit unde?</p>
+        <button>Shop Now</button>
+    </div>
+</section>
+<!-- app discount end -->

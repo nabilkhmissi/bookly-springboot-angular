@@ -22,8 +22,8 @@ export class BrowseComponent {
     })
   );
 
-  search(event: any) {
-    this._books.title.next(event.value);
+  searchBook(item : string) {
+    this._books.title.next(item);
   }
 
   changePage(page: any) {

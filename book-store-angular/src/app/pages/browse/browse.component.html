@@ -1,19 +1,23 @@
-<section class="browse">
-    <div class="side-bar">
-        <app-browse-filter></app-browse-filter>
+<section class="container">
+    <div class="browse">
+        <div class="side-bar">
+            <app-browse-filter></app-browse-filter>
+        </div>
+        <div class="content">
+            <div class="search-bar">
+                <input type="text" placeholder="search..." #search>
+                <button class="search-btn" (click)="searchBook(search.value)">Search</button>
+            </div>
+            <div class="grid" *ngIf="(books$ | async) as books">
+                <app-book-card *ngFor="let b of books" [book]="b"></app-book-card>
+            </div>
+            <div class="alert alert-secondary text-center" *ngIf="emptySearch">
+                No book found
+            </div>
+            <div class="pagination" *ngIf="!emptySearch">
+                <app-pagination (pageEvent)="changePage($event)" [pages]="totalPages"></app-pagination>
+            </div>
+        </div>
     </div>
-    <div class="content">
-        <div class="search-bar">
-            <input type="text" placeholder="search..." (input)="search($event.target)">
-        </div>
-        <div class="grid" *ngIf="(books$ | async) as books">
-            <app-book-card *ngFor="let b of books" [book]="b"></app-book-card>
-        </div>
-        <div class="alert alert-secondary text-center" *ngIf="emptySearch">
-            No book found
-        </div>
-        <div class="pagination" *ngIf="!emptySearch">
-            <app-pagination (pageEvent)="changePage($event)" [pages]="totalPages"></app-pagination>
-        </div>
-    </div>
+
 </section>

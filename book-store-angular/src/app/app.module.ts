@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { IndexComponent } from './pages/index/index.component';
-import { HeroComponent } from './components/hero/hero.component';
-import { FeaturedComponent } from './components/featured/featured.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CheckoutFormComponent } from './components/checkout-form/checkout-form.component';
 import { CheckoutItemComponent } from './components/checkout-item/checkout-item.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { BrowseFilterComponent } from './components/browse-filter/browse-filter.component';
-import { BestSellersComponent } from './components/best-sellers/best-sellers.component';
 import { BrowseComponent } from './pages/browse/browse.component';
 import { NotificationComponent } from './components/notification/notification.component';
 import { LoadingComponent } from './components/loading/loading.component';
@@ -37,7 +35,7 @@ import { BookCardComponent } from './components/book-card/book-card.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 import { ChangePasswordComponent } from './pages/change-password/change-password.component';
-import { FeaturesComponent } from './components/features/features.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -45,13 +43,9 @@ import { FeaturesComponent } from './components/features/features.component';
     NavbarComponent,
     FooterComponent,
     IndexComponent,
-    HeroComponent,
-    FeaturedComponent,
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    HeroComponent,
-    BestSellersComponent,
     BrowseComponent,
     BrowseFilterComponent,
     PaginationComponent,
@@ -76,15 +70,17 @@ import { FeaturesComponent } from './components/features/features.component';
     BookCardComponent,
     CheckoutComponent,
     ResetPasswordComponent,
-    ChangePasswordComponent,
-    FeaturesComponent
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CarouselModule,
+    BrowserAnimationsModule
+
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

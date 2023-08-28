@@ -1,11 +1,13 @@
-<div class="achievements">
-    <h1>New added books</h1>
-    <div class="div" *ngIf="books">
-        <div class="grid">
-            <app-book-card *ngFor="let b of books" [book]="b"></app-book-card>
-        </div>
-        <div class="pagination">
-            <app-pagination (pageEvent)="changePage($event)" [pages]="totalPages"></app-pagination>
+<section class="container">
+    <div class="achievements">
+        <h1>New added books</h1>
+        <div class="div" *ngIf="books">
+            <div class="grid">
+                <app-book-card *ngFor="let b of books" [book]="b"></app-book-card>
+            </div>
+            <div class="pagination">
+                <app-pagination (pageEvent)="changePage($event)" [pages]="totalPages"></app-pagination>
+            </div>
         </div>
     </div>
-</div>
+</section>

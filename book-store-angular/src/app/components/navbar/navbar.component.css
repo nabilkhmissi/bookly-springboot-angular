@@ -6,14 +6,14 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 0.5rem;
-/*     position: fixed;
+    /*     position: fixed;
     top: 0; */
     position: sticky;
     top: 0;
     z-index: 99;
 }
 
-.logo h2{
+.logo h2 {
     margin-right: 20px;
 }
 
@@ -59,17 +59,11 @@ i.bx {
     font-weight: bold;
 }
 
-.list-btn{
+.list-btn {
     display: none;
 }
-@media (max-width:500px) {
-    .nav-menu {
-        display: none;
-    }
-    .list-btn{
-        display: block;
-    }
-}
+
+
 
 .profile-btn {
     position: relative;
@@ -103,4 +97,18 @@ i.bx {
 .sub-profile li a:hover {
     background-color: #869778;
     color: white;
+}
+
+@media (max-width:500px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .list-btn {
+        display: block;
+    }
+
+    .nav-actions {
+        gap: 0.3rem;
+    }
 }

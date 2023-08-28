@@ -2,7 +2,7 @@
     <div class="container">
         <div class="nav">
             <a routerLink="index" class="logo">
-                <h2 >BookStore</h2>
+                <h2>BookStore</h2>
             </a>
             <div class="nav-menu">
                 <a routerLink="index" routerLinkActive="active-link">Home</a>
@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <div class="nav" *ngIf="isAuthenticated$ | async">
+        <div class="nav nav-actions" *ngIf="isAuthenticated$ | async">
             <div class="nav-action cart" *ngIf="cart$ | async as cart" (click)="toggleCart($event)">
                 <span id="cart-btn"><i class="bx bx-cart"></i></span>
                 <span class="cart-item">
@@ -25,7 +25,7 @@
                 <span href=""><i class="bx bx-heart"></i></span>
             </div>
             <div class="nav-action profile-btn">
-                <span href=""><i class="bx bx-user"></i></span>
+                <span href=""><i class='bx bx-user'></i></span>
                 <ul class="sub-profile">
                     <li>
                         <a href="">Account settings</a>

@@ -17,7 +17,8 @@
 }
 
 .search-bar {
-    display: block;
+    display: flex;
+    gap: 1rem;
     margin-bottom: 2rem;
 
 }
@@ -25,9 +26,17 @@
 .search-bar input {
     padding: 5px 20px;
     width: 100%;
+    outline: none;
 }
 
-.pagination{
+.search-btn {
+    background-color: #a8b79c;
+    color: white;
+    padding: 0 1rem;
+    border: none;
+}
+
+.pagination {
     display: flex;
     justify-content: center;
 }
@@ -41,7 +50,7 @@
     }
 }
 
-.alert-secondary{
+.alert-secondary {
     background-color: transparent;
-    border:1px solid #a8b79c;
+    border: 1px solid #a8b79c;
 }
