@@ -1,13 +1,10 @@
-.navbar {
+/* .navbar {
     display: flex;
-    background-color: #a8b79c;
+    background-color: #333;
     color: white;
     padding: 10px 30px;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 0.5rem;
-    /*     position: fixed;
-    top: 0; */
     position: sticky;
     top: 0;
     z-index: 99;
@@ -111,4 +108,122 @@ i.bx {
     .nav-actions {
         gap: 0.3rem;
     }
+} */
+
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 99;
+}
+
+header .logo {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-actions {
+    display: flex;
+}
+
+.nav-links a {
+    padding: 1.5rem 0;
+    margin-left: 1rem;
+    text-decoration: none;
+    position: relative;
+    color: black;
+}
+
+.nav-actions a {
+    padding: 1.5rem 0;
+    margin-left: 1rem;
+    text-decoration: none;
+    position: relative;
+    color: black;
+}
+
+.nav-link:hover::after,
+.nav-action a:hover::after {
+    content: "";
+    height: 5px;
+    width: 100%;
+    background-color: rgb(155, 196, 139);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: .2s ease-in-out;
+}
+
+.header-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+.shopping-btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.shopping-btn .icon {
+    font-size: 25px;
+}
+
+.sticky-pin {
+    padding: 2px 5px;
+    color: white;
+    background-color: red;
+    border-radius: 10px;
+    position: absolute;
+    top: 19%;
+    right: -9px;
+    font-size: 13px;
+}
+
+/* header end */
+
+@media (max-width:600px) {
+
+
+    .header-menu {
+        display: block;
+    }
+
+    .hero .hero-text {
+        background-color: rgba(255, 255, 255, 0.787);
+        padding: 2rem;
+        width: 90%;
+    }
+
+    .section-title::after {
+        content: "";
+        height: 5px;
+        width: 90px;
+        transform: translateX(70%);
+    }
+
+    .nav-menu {
+        display: flex;
+    }
+
 }

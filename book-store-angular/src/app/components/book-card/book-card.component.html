@@ -1,4 +1,4 @@
-<div class="product-card">
+<!-- <div class="product-card">
     <div class="product-image">
         <img [src]="book.image" alt="">
         <div class="overlay">
@@ -24,4 +24,24 @@
         </div>
         <span class="product-price">${{ book.price | number:'1.0-2' }}</span>
     </div>
+</div> -->
+<div class="book-card">
+    <a href="" class="book-card-link">
+        <div class="book-image">
+            <img [src]="book.image" alt="">
+        </div>
+        <div class="book-details">
+            <h2>{{ book.title }}</h2>
+            <div class="product-rating">
+                <i style="color: #879978;" class='bx bx-star' *ngFor="let a of [].constructor(book.rating)"></i>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, voluptate?</p>
+            <h3 class="book-price">$ {{ book.price | number:'1.0-2' }}</h3>
+            <div class="book-card-actions">
+                <a (click)="addToCart()">ADD TO CART</a>
+                <i (click)="addToWishlist()" class="bx bx-heart"></i>
+            </div>
+        </div>
+    </a>
+
 </div>

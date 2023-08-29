@@ -8,13 +8,6 @@
     width: 100%;
 }
 
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    justify-content: center;
-    grid-gap: 0.5rem;
-    margin-bottom: 30px;
-}
 
 .search-bar {
     display: flex;
@@ -41,6 +34,10 @@
     justify-content: center;
 }
 
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
 
 @media (max-width:600px) {
     .browse {

@@ -9,12 +9,13 @@ import { WishlistService } from 'src/app/services/wishlist.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  constructor(private _auth: AuthService, 
-    private _cart: CartService, 
+  constructor(private _auth: AuthService,
+    private _cart: CartService,
     private _wishlist: WishlistService) { }
 
   isAuthenticated$ = this._auth.isAuthenticated$;
   isOpened = false;
+  menuOpened = false;
   wishlistIsOpened = false;
   cart$ = this._cart.cart$;
 
@@ -33,5 +34,8 @@ export class NavbarComponent {
     event.preventDefault();
     this._wishlist.isOpen.next(!this.wishlistIsOpened)
     this.wishlistIsOpened = !this.wishlistIsOpened
+  }
+  openMenu() {
+    this.menuOpened = !this.menuOpened
   }
 }

@@ -8,7 +8,7 @@
                 <input type="text" placeholder="search..." #search>
                 <button class="search-btn" (click)="searchBook(search.value)">Search</button>
             </div>
-            <div class="grid" *ngIf="(books$ | async) as books">
+            <div class="books-grid" *ngIf="(books$ | async) as books">
                 <app-book-card *ngFor="let b of books" [book]="b"></app-book-card>
             </div>
             <div class="alert alert-secondary text-center" *ngIf="emptySearch">

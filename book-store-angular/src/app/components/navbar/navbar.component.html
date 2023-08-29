@@ -1,69 +1,50 @@
-<div class="navbar container-fluid">
-    <div class="container">
-        <div class="nav">
-            <a routerLink="index" class="logo">
-                <h2>BookStore</h2>
-            </a>
-            <div class="nav-menu">
-                <a routerLink="index" routerLinkActive="active-link">Home</a>
-                <a routerLink="books/browser" routerLinkActive="active-link">Browse</a>
-                <a routerLink="authors" routerLinkActive="active-link">Authors</a>
-                <a routerLink="books/best-sellers" routerLinkActive="active-link">Best sellers</a>
-                <a routerLink="books/newest" routerLinkActive="active-link">Newest</a>
-                <a routerLink="books/featured" routerLinkActive="active-link">Featured</a>
-            </div>
-        </div>
-
-        <div class="nav nav-actions" *ngIf="isAuthenticated$ | async">
-            <div class="nav-action cart" *ngIf="cart$ | async as cart" (click)="toggleCart($event)">
-                <span id="cart-btn"><i class="bx bx-cart"></i></span>
-                <span class="cart-item">
-                    {{ cart.items.length }}
-                </span>
-            </div>
-            <div class="nav-action" (click)="toggleWishlist($event)">
-                <span href=""><i class="bx bx-heart"></i></span>
-            </div>
-            <div class="nav-action profile-btn">
-                <span href=""><i class='bx bx-user'></i></span>
-                <ul class="sub-profile">
-                    <li>
-                        <a href="">Account settings</a>
-                    </li>
-                    <li>
-                        <a (click)="logout($event)">Logout</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="nav-action profile-btn list-btn">
-                <span href=""><i class="bx bx-menu"></i></span>
-                <ul class="sub-profile">
-                    <li>
-                        <a routerLink="/books/browser">Books</a>
-                    </li>
-                    <li>
-                        <a routerLink="/authors">Authors</a>
-                    </li>
-                    <li>
-                        <a routerLink="/books/newest">Newest</a>
-                    </li>
-                    <li>
-                        <a routerLink="/books/best-sellers">Best sellers</a>
-                    </li>
-                    <li>
-                        <a routerLink="/books/featured">Featured</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="nav" *ngIf="!(isAuthenticated$ | async)">
-            <div class="nav-action">
-                <a routerLink="login">Login</a>
-            </div>
-            <div class="nav-action">
-                <a routerLink="register">Register</a>
-            </div>
-        </div>
+<header class="container">
+    <a routerLink="/" class="logo">
+        <h1>Bookly</h1>
+    </a>
+    <div class="nav-links">
+        <a routerLink="/" class="nav-link">Discover</a>
+        <a routerLink="/books/featured" class="nav-link">Featured</a>
+        <a routerLink="/books/newest" class="nav-link">Newest</a>
+        <a routerLink="/books/best-sellers" class="nav-link">Best sellers</a>
     </div>
-</div>
+    <div class="nav-actions">
+        <div class="shopping-btn" *ngIf="isAuthenticated$ | async">
+            <a *ngIf="cart$ | async as cart" (click)="toggleCart($event)">
+                <span class="material-symbols-outlined icon">
+                    shopping_bag
+                </span>
+                <span class="sticky-pin"> {{ cart.items.length }}</span>
+            </a>
+            <a (click)="toggleWishlist($event)">
+                <span class="material-symbols-outlined icon">
+                    favorite
+                </span>
+            </a>
+            <a>
+                <span class="material-symbols-outlined icon">
+                    person
+                </span>
+            </a>
+
+        </div>
+        <a routerLink="login" class="nav-link" *ngIf="!(isAuthenticated$ | async)">Login</a>
+        <a routerLink="register" class="nav-link" *ngIf="!(isAuthenticated$ | async)">Regiter</a>
+        <a class="nav-link header-menu" (click)="openMenu()">
+            <span class="material-symbols-outlined"
+                [ngStyle]="{ 'transform' : menuOpened ? 'rotate(90deg)' : 'rotate(180deg)' }">
+                {{ menuOpened ? 'close' : 'menu' }}
+            </span>
+        </a>
+    </div>
+    <!-- in small screen -->
+    <div class="nav-links nav-menu" [ngStyle]="{'transform':menuOpened ? 'translateY(0)' : 'translateY(-150%)' }">
+        <a routerLink="/books/browser" class="nav-link">Discover</a>
+        <a routerLink="/books/featured" class="nav-link">Featured</a>
+        <a routerLink="/books/newest" class="nav-link">Newest</a>
+        <a routerLink="/books/best-sellers" class="nav-link">Best sellers</a>
+        <a routerLink="/authors" class="nav-link">Authors</a>
+    </div>
+    <!-- in small screen end -->
+</header>
+<!-- heade end -->
