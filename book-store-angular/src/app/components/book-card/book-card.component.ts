@@ -43,6 +43,5 @@ export class BookCardComponent {
       return;
     }
     this._notification.showNotification("You have to sign in first to add this book to wishlist")
-
   }
 }

@@ -1,9 +1,8 @@
-<nav>
-    <ul class="pagination">
-        <li class="pagination-item" *ngFor="let item of [].constructor(pages); let i = index">
-            <a (click)="changePage(i)" [ngClass]="{ 'active':active==i }" class="pagination-page">
-                {{ i+1 }}
-            </a>
-        </li>
-    </ul>
-</nav>
+<div class="pagination">
+    <a class="pagination-page"><<</a>
+    <a *ngFor="let item of [].constructor(pages); let i = index" (click)="changePage(i)"
+        [ngClass]="{ 'active':active==i }" class="pagination-page">
+        {{ i+1 }}
+    </a>
+    <a class="pagination-page">>></a>
+</div>

@@ -3,10 +3,11 @@
         <h1>Bookly</h1>
     </a>
     <div class="nav-links">
-        <a routerLink="/" class="nav-link">Discover</a>
-        <a routerLink="/books/featured" class="nav-link">Featured</a>
-        <a routerLink="/books/newest" class="nav-link">Newest</a>
-        <a routerLink="/books/best-sellers" class="nav-link">Best sellers</a>
+        <a routerLinkActive="active-router" routerLink="/books/browse" class="nav-link">Discover</a>
+        <a routerLinkActive="active-router" routerLink="/books/featured" class="nav-link">Featured</a>
+        <a routerLinkActive="active-router" routerLink="/books/newest" class="nav-link">Newest</a>
+        <a routerLinkActive="active-router" routerLink="/books/best-sellers" class="nav-link">Best sellers</a>
+        <a routerLinkActive="active-router" routerLink="/authors" class="nav-link">Authors</a>
     </div>
     <div class="nav-actions">
         <div class="shopping-btn" *ngIf="isAuthenticated$ | async">

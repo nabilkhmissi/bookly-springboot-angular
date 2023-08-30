@@ -1,22 +1,18 @@
 <div class="browse-filter">
     <form [formGroup]="searchForm">
         <div class="filter-section">
-            <h4>Categories</h4>
-            <div>
-                <select class="form-select" *ngIf="categories$ | async as categories" formControlName="category">
-                    <option value="">All</option>
-                    <option *ngFor="let a of categories" [ngValue]="a.designation">{{ a.designation }}</option>
-                </select>
-            </div>
+            <h3>Categories</h3>
+            <select class="form-select" *ngIf="categories$ | async as categories" formControlName="category">
+                <option value="">All</option>
+                <option *ngFor="let a of categories" [ngValue]="a.designation">{{ a.designation }}</option>
+            </select>
         </div>
         <div class="filter-section">
-            <h4>Authors</h4>
-            <div>
-                <select class="form-select" *ngIf="authors$ | async as authors" formControlName="author">
-                    <option value="">All</option>
-                    <option *ngFor="let a of authors" [ngValue]="a.id">{{ a.full_name }}</option>
-                </select>
-            </div>
+            <h3>Authors</h3>
+            <select class="form-select" *ngIf="authors$ | async as authors" formControlName="author">
+                <option value="">All</option>
+                <option *ngFor="let a of authors" [ngValue]="a.id">{{ a.full_name }}</option>
+            </select>
         </div>
         <!-- <div class="filter-section">
             <h4>Price</h4>

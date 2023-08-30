@@ -19,12 +19,12 @@ public class LibraryAppMongoApplication {
         SpringApplication.run(LibraryAppMongoApplication.class, args);
     }
 
-    @Bean
+   /* @Bean
     public CommandLineRunner commandLineRunner(BookRepo bookRepo) {
         return args -> {
             dbInitService.initAuthors();
         };
     }
-
+*/
 }
 

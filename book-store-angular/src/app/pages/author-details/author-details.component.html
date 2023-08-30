@@ -1,7 +1,7 @@
-<div class="details" *ngIf="author$ | async as author">
+<section class="details container" *ngIf="author$ | async as author">
     <div class="image">
         <div class="img-wrapper">
-            <img src="../../../assets/placeholder_user.jpg" alt="" style="width: 100%;">
+            <img src="../../../assets/placeholder_user.jpg" alt="" style="height:100%;">
         </div>
         <div class="infos">
             <h1>{{ author.full_name }}</h1>
@@ -11,9 +11,11 @@
         </div>
     </div>
     <div class="achievements">
-        <h1>Books</h1>
+        <div class="section-title">
+            <h1>Books</h1>
+        </div>
         <div class="div" *ngIf="(books$ | async)?.content as books">
-            <div class="books">
+            <div class="books-grid">
                 <app-book-card *ngFor="let b of books" [book]="b"></app-book-card>
             </div>
             <div class="pagination">
@@ -21,4 +23,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>

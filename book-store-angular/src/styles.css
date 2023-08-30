@@ -251,7 +251,8 @@ section {
 
 
     section {
-        padding: 1rem 0;
+        padding: 0 3rem;
+        padding-bottom: 2rem;
     }
 
     .header-menu {
@@ -315,7 +316,7 @@ section {
     }
 
     .books-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .footer {

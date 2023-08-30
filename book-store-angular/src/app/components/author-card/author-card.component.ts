@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Author } from 'src/app/models/author.model';
 
 @Component({
@@ -9,5 +10,9 @@ import { Author } from 'src/app/models/author.model';
 export class AuthorCardComponent {
 
   @Input() author!: Author;
+  constructor(private _router: Router) { }
 
+  goToAuthor() {
+    this._router.navigateByUrl("/authors/details/" + this.author.id)
+  }
 }

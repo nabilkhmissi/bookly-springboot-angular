@@ -28,7 +28,7 @@
     top: 0;
 }
 
-.button {
+.wishlist-close {
     position: relative;
     z-index: 10;
 }
@@ -85,8 +85,8 @@
     border-top: 1px solid #a8b79c;
 }
 
-@media screen and (max-width:500px){
-    .cart-list{
+@media screen and (max-width:500px) {
+    .cart-list {
         width: 80%;
     }
 }

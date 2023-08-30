@@ -17,7 +17,7 @@ import { ChangePasswordComponent } from './pages/change-password/change-password
 const routes: Routes = [
   { path: '', redirectTo: 'index', pathMatch: 'full' },
   { path: 'index', component: IndexComponent },
-  { path: 'books/browser', component: BrowseComponent },
+  { path: 'books/browse', component: BrowseComponent },
   { path: 'books/details/:id', component: ProductDetailsComponent },
   { path: 'authors/details/:id', component: AuthorDetailsComponent },
   { path: 'books/featured', component: FeaturedPageComponent },

@@ -165,6 +165,18 @@ header .logo {
     transition: .2s ease-in-out;
 }
 
+.active-router::after {
+    content: "";
+    height: 5px;
+    width: 100%;
+    background-color: rgb(155, 196, 139);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: .2s ease-in-out;
+}
+
 .header-menu {
     display: none;
     cursor: pointer;
@@ -182,6 +194,7 @@ header .logo {
     display: flex;
     align-items: center;
     position: relative;
+    cursor: pointer;
 
 }
 

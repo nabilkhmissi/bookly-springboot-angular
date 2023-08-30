@@ -1,9 +1,8 @@
 <section class="container">
-    <div class="page-title">
-        <h4>Authors</h4>
-        <span class="sub-title"></span>
+    <div class="section-title">
+        <h1>Authors</h1>
     </div>
-    <div class="content">
+    <div class="authors-grid">
         <app-author-card *ngFor="let a of authors" [author]="a"></app-author-card>
     </div>
     <div class="pagination" *ngIf="!emptySearch">

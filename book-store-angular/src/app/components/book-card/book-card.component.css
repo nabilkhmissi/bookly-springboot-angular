@@ -5,6 +5,7 @@
     overflow: hidden;
     padding-top: 1rem;
     position: relative;
+    height: 100%;
 }
 
 .book-card:hover {
@@ -57,12 +58,17 @@
     padding: 0.5rem;
 }
 
-.book-card-actions i {
+.book-card-actions span {
     padding: 0.5rem;
     font-size: 25px;
 }
 
-.book-card-actions i:hover {
+.book-card .book-card-actions span:hover {
+    cursor: pointer;
+
+}
+
+.whishlist:hover {
     cursor: pointer;
     background-color: red;
     color: white;
@@ -70,5 +76,7 @@
 }
 
 .book-card-actions a:hover {
-    border-bottom: 2px solid black;
+    color: red;
+    border-bottom: 2px solid red;
+    cursor: pointer;
 }

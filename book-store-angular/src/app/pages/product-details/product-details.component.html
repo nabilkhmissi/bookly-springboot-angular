@@ -1,11 +1,11 @@
-<div class="details" *ngIf="book$ | async as book">
+<section class="details container" *ngIf="book$ | async as book">
     <div class="image-section">
-        <img [src]="book.image" alt="" style="width: 100%;">
+        <img [src]="book.image" alt="">
     </div>
     <div class="infos">
         <div class="infos-section">
             <div class="info-section">
-                <h5>{{ book.title }}</h5>
+                <h2>{{ book.title }}</h2>
             </div>
             <div class="info-section" style="display: flex;gap: 10px;">
                 <div class="rating-section">
@@ -57,4 +57,4 @@
         </div>
 
     </div>
-</div>
+</section>
