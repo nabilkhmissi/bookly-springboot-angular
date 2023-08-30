@@ -35,7 +35,6 @@ import { BookCardComponent } from './components/book-card/book-card.component';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 import { ChangePasswordComponent } from './pages/change-password/change-password.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ShortenPipe } from './pipes/shorten.pipe';
 
 @NgModule({
@@ -72,7 +71,7 @@ import { ShortenPipe } from './pipes/shorten.pipe';
     CheckoutComponent,
     ResetPasswordComponent,
     ChangePasswordComponent,
-    ShortenPipe
+    ShortenPipe,
   ],
   imports: [
     BrowserModule,
@@ -80,8 +79,7 @@ import { ShortenPipe } from './pipes/shorten.pipe';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
 
   ],
   providers: [

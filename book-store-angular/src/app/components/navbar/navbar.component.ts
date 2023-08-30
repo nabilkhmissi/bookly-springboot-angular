@@ -18,6 +18,7 @@ export class NavbarComponent {
   menuOpened = false;
   wishlistIsOpened = false;
   cart$ = this._cart.cart$;
+  accountToggled = false;
 
   toggleCart(event: Event) {
     event.preventDefault();
@@ -37,5 +38,9 @@ export class NavbarComponent {
   }
   openMenu() {
     this.menuOpened = !this.menuOpened
+  }
+
+  toggleAccount() {
+    this.accountToggled = !this.accountToggled
   }
 }

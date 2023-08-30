@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { from } from 'rxjs';
 import { AuthorService } from 'src/app/services/author.service';
 import { BookService } from 'src/app/services/book.service';
 
@@ -13,5 +12,4 @@ export class IndexComponent {
 
   featured$ = this._book.getFeatured(0, 7);
   newest$ = this._book.findNewest(0, 4);
-
 }

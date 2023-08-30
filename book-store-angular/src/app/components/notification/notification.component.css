@@ -110,7 +110,9 @@
 .loading {
     padding: 20px;
     background-color: white;
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .content {
@@ -118,4 +120,17 @@
     display: flex;
     word-wrap: break-word;
     max-width: 400px;
+}
+
+.notification-btn {
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.notification-btn:hover {
+    background-color: #4d4d4d;
 }

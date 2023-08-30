@@ -24,7 +24,6 @@ public class LibraryAppMongoApplication {
         return args -> {
             dbInitService.initAuthors();
         };
-    }
-*/
+    }*/
 }
 

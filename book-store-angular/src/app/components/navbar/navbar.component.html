@@ -22,10 +22,15 @@
                     favorite
                 </span>
             </a>
-            <a>
-                <span class="material-symbols-outlined icon">
+            <a class="account-icon">
+                <span class="material-symbols-outlined icon" (click)="toggleAccount()">
                     person
                 </span>
+                <div class="account-dropdown" *ngIf="accountToggled">
+                    <a>Account settings</a>
+                    <a>Account settings</a>
+                    <a (click)="logout($event)">Logout</a>
+                </div>
             </a>
 
         </div>
